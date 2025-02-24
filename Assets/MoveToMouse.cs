@@ -16,7 +16,7 @@ public class MoveToMouse : MonoBehaviour
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hitinfo;
 
-        if(Physics.Raycast(ray.origin, ray.direction, out hitinfo))
+        if(Physics.Raycast(ray.origin, ray.direction, out hitinfo) && Input.GetKeyDown(KeyCode.Mouse0))
         {
             agent.destination = hitinfo.point;
         }
