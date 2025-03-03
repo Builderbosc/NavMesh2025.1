@@ -5,6 +5,7 @@ public class SlidingDoor : MonoBehaviour
     public Vector3 positionOffset = new Vector3(0f, 0f, -2f);
     private Vector3 openPosition;
     public float speed;
+    public float doorRequirement;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
