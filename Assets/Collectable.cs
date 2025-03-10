@@ -1,8 +1,9 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Collectable : MonoBehaviour
 {
-    public SlidingDoor door[];
+    public List<SlidingDoor> doors;
     public int collectedItems = 0;
     public int requiredItems = 3;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -14,9 +15,12 @@ public class Collectable : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (collectedItems >= door.doorRequirement)
+        foreach (var door in doors)
         {
-            door.OpenTheDoor();
+            if (collectedItems >= door.doorRequirement)
+            {
+                door.OpenTheDoor();
+            }
         }
     }
 
