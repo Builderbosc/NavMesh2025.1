@@ -14,6 +14,7 @@ public class Collectable : MonoBehaviour
 
     // Update is called once per frame
     void Update()
+
     {
         foreach (var door in doors)
         {
