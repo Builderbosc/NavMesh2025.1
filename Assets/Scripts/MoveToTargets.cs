@@ -5,9 +5,9 @@ using System.Collections.Generic;
 public class MoveToTargets : MonoBehaviour
 {
     public List<GameObject> targets = new List<GameObject>();
-    [SerializeField] private GameObject[] arrayTargets;
-    [SerializeField] private int targetCount;
-    [SerializeField] private GameObject currentTarget;
+    private GameObject[] arrayTargets;
+    private int targetCount;
+    private GameObject currentTarget;
 
     private NavMeshAgent agent;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
