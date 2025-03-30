@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.AI;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 
 public class MoveToTargets : MonoBehaviour
 {
@@ -22,7 +23,7 @@ public class MoveToTargets : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ((agent.transform.position.x == currentTarget.transform.position.x) && (agent.transform.position.z == currentTarget.transform.position.z))
+        if ((Mathf.RoundToInt(agent.transform.position.x) == Mathf.RoundToInt(currentTarget.transform.position.x)) && (Mathf.RoundToInt(agent.transform.position.z) == Mathf.RoundToInt(currentTarget.transform.position.z)))
         {
             targetCount++;
             if (targetCount == targets.Count)
