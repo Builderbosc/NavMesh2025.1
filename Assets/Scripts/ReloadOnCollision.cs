@@ -3,9 +3,10 @@ using UnityEngine.SceneManagement;
 
 public class ReloadOnCollision : MonoBehaviour
 {
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.tag == "Enemy")
+        Debug.Log("Collidesss");
+        if (other.gameObject.tag == "Enemy")
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
